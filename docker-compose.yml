@@ -7,7 +7,7 @@ services:
     ports:
       - "4200:4200"
     volumes:
-      - ./content:/application
+      - ./content/angular:/application
     tty: true  # docker run のオプションに対応
 
   # エンドユーザ向けのコンテンツ配布用
@@ -16,17 +16,17 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./content/app/dist:/usr/share/nginx/html/app
+      - ./content/angular/app/dist:/usr/share/nginx/html/app
 
   api:
     build: ./docker/django
     volumes:
-      - ./content:/application
+      - ./content/django/api:/application
     tty: true
 
   api-server:
     build: ./docker/api-server
     volumes:
-      - ./content/api:/usr/share/nginx/html/api
+      - ./content/django:/usr/share/nginx/html/api
     ports:
       - "3000:3000"
