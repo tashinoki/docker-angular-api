@@ -1,1 +1,2 @@
-django==2.2.10
+django==2.2.3
+uwsgi==2.0.18
