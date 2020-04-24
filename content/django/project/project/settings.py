@@ -127,8 +127,6 @@ STATIC_URL = '/static/'
 # 許可するオリジン
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:4200'
-    'angular',
-    '172.28.0.5'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
