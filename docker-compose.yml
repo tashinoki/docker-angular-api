@@ -21,7 +21,7 @@ services:
   api:
     build: ./docker/django
     volumes:
-      - ./content/django/api:/application
+      - ./content/django:/application
     tty: true
 
   api-server:
