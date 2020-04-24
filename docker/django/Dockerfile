@@ -7,3 +7,4 @@ WORKDIR /application
 
 ADD requirements.txt /application/
 RUN pip install -r requirements.txt
+CMD ["uwsgi", "--ini", "uwsgi.ini"]

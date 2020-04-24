@@ -8,6 +8,8 @@ services:
       - "4200:4200"
     volumes:
       - ./content/angular:/application
+    links:
+      - api-server
     tty: true  # docker run のオプションに対応
 
   # エンドユーザ向けのコンテンツ配布用
